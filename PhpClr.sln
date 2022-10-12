@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhpParser", "PhpParser\PhpParser.csproj", "{CFC0FECA-DA24-4375-B011-5DE0086B6337}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Parsers", "Parsers", "{834F9816-4952-4177-8848-0005C9904E7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{CECDBBE3-49C5-42F4-AE2E-E6E425C7BECF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CFC0FECA-DA24-4375-B011-5DE0086B6337}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFC0FECA-DA24-4375-B011-5DE0086B6337}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFC0FECA-DA24-4375-B011-5DE0086B6337}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFC0FECA-DA24-4375-B011-5DE0086B6337}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CECDBBE3-49C5-42F4-AE2E-E6E425C7BECF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CECDBBE3-49C5-42F4-AE2E-E6E425C7BECF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CECDBBE3-49C5-42F4-AE2E-E6E425C7BECF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CECDBBE3-49C5-42F4-AE2E-E6E425C7BECF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CFC0FECA-DA24-4375-B011-5DE0086B6337} = {834F9816-4952-4177-8848-0005C9904E7F}
+	EndGlobalSection
+EndGlobal
