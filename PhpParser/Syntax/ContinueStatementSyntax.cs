@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using ApexSharp.ApexParser.Visitors;
+﻿using System.Collections.Generic;
+using PhpClr.Parsers.PhpParser.Visitors;
 
-namespace ApexSharp.ApexParser.Syntax
+namespace PhpClr.Parsers.PhpParser.Syntax
 {
     public class ContinueStatementSyntax : StatementSyntax
     {

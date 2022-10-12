@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ApexSharp.ApexParser.Toolbox;
+using PhpClr.Parsers.PhpParser.Toolbox;
 
-namespace ApexSharp.ApexParser.Syntax
+namespace PhpClr.Parsers.PhpParser.Syntax
 {
     public static class SyntaxExtensions
     {

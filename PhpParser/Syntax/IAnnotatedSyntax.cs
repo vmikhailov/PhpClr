@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
-namespace ApexSharp.ApexParser.Syntax
+namespace PhpClr.Parsers.PhpParser.Syntax
 {
     public interface IAnnotatedSyntax
     {

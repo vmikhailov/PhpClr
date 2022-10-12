@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using ApexSharp.ApexParser.Parser;
-using ApexSharp.ApexParser.Syntax;
-using ApexSharp.ApexParser.Toolbox;
+using PhpClr.Parsers.PhpParser.Grammar;
+using PhpClr.Parsers.PhpParser.Syntax;
+using PhpClr.Parsers.PhpParser.Toolbox;
 
-namespace ApexSharp.ApexParser.Visitors
+namespace HackCLR.Parsers.PhpParser.Visitors
 {
     public class ApexCodeGeneratorBase : CodeGeneratorBase
     {
@@ -324,7 +324,7 @@ namespace ApexSharp.ApexParser.Visitors
         }
 
         protected virtual HashSet<string> SystemClasses =>
-            new HashSet<string> { ApexKeywords.Map, ApexKeywords.List, ApexKeywords.Set };
+            new HashSet<string> { PhpKeywords.Map, PhpKeywords.List, PhpKeywords.Set };
 
         public virtual string NormalizeTypeName(string id) =>
             SystemClasses.Contains(id) ?

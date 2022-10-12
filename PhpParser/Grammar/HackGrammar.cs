@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using HackCLR.Parsers.PhpParser.Syntax;
-using HackCLR.Parsers.PhpParser.Toolbox;
+using PhpClr.Parsers.PhpParser.Syntax;
+using PhpClr.Parsers.PhpParser.Toolbox;
 using Sprache;
 
-namespace HackCLR.Parsers.PhpParser.Grammar
+namespace PhpClr.Parsers.PhpParser.Grammar
 {
-	public class PhpGrammar : ICommentParserProvider
+	public class HackGrammar : ICommentParserProvider
 	{
 		// examples: a, Apex, code123
 		protected internal virtual Parser<string> RawIdentifier =>

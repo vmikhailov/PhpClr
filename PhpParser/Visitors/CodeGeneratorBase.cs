@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using ApexSharp.ApexParser.Syntax;
-using ApexSharp.ApexParser.Toolbox;
+using HackCLR.Parsers.PhpParser.Visitors;
+using PhpClr.Parsers.PhpParser.Syntax;
+using PhpClr.Parsers.PhpParser.Toolbox;
+using PhpClr.Parsers.PhpParser.Visitors;
 
-namespace ApexSharp.ApexParser.Visitors
+namespace HackCLR.Parsers.PhpParser.Visitors
 {
     public class CodeGeneratorBase : ApexSyntaxVisitor
     {

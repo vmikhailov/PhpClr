@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using ApexSharp.ApexParser.Visitors;
-using Sprache;
+using PhpClr.Parsers.PhpParser.Visitors;
 
-namespace ApexSharp.ApexParser.Syntax
+namespace PhpClr.Parsers.PhpParser.Syntax
 {
     public class MethodDeclarationSyntax : MemberDeclarationSyntax
     {

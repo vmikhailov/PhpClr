@@ -1,7 +1,16 @@
 <?php 
 //this is a class
 class Fruit {
-	//this is class body
+  // Methods
+  one_argument(int a)
+  {
+                   
+  }
+
+  two_arguments(string a, double b)
+  {
+                   
+  }
 }
 
 //this is a comment after the code

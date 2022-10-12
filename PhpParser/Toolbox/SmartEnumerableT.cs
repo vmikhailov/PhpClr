@@ -3,11 +3,10 @@
 // namespace MiscUtil.Collections
 /*--------------------------------*/
 
-using System;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace ApexSharp.ApexParser.Toolbox
+namespace PhpClr.Parsers.PhpParser.Toolbox
 {
     /// <summary>
     /// Type chaining an IEnumerable{T} to allow the iterating code

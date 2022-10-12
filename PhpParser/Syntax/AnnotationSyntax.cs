@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ApexSharp.ApexParser.Parser;
-using ApexSharp.ApexParser.Visitors;
+﻿using System.Collections.Generic;
+using PhpClr.Parsers.PhpParser.Grammar;
+using PhpClr.Parsers.PhpParser.Visitors;
 
-namespace ApexSharp.ApexParser.Syntax
+namespace PhpClr.Parsers.PhpParser.Syntax
 {
     public class AnnotationSyntax : BaseSyntax
     {
@@ -26,6 +22,6 @@ namespace ApexSharp.ApexParser.Syntax
 
         public override IEnumerable<BaseSyntax> ChildNodes => NoChildren;
 
-        public bool IsTest => ApexKeywords.UnitTestKeywords.Contains(Identifier);
+        public bool IsTest => PhpKeywords.UnitTestKeywords.Contains(Identifier);
     }
 }

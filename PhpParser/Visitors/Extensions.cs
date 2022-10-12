@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ApexSharp.ApexParser.Syntax;
+﻿using HackCLR.Parsers.PhpParser.Visitors;
+using PhpClr.Parsers.PhpParser.Syntax;
 
-namespace ApexSharp.ApexParser.Visitors
+namespace PhpClr.Parsers.PhpParser.Visitors
 {
     public static class Extensions
     {

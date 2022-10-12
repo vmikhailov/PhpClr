@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ApexSharp.ApexParser.Visitors;
+using PhpClr.Parsers.PhpParser.Visitors;
 
-namespace ApexSharp.ApexParser.Syntax
+namespace PhpClr.Parsers.PhpParser.Syntax
 {
     public class TryStatementSyntax : StatementSyntax
     {

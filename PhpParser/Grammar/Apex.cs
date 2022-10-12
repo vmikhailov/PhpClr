@@ -1,19 +1,16 @@
-﻿using HackCLR.Parsers.PhpParser.Syntax;
-using HackCLR.Parsers.PhpParser.Toolbox;
-
-namespace HackCLR.Parsers.PhpParser.Parser
+﻿namespace PhpClr.Parsers.PhpParser.Grammar
 {
     internal static class Apex
     {
-        private static ApexGrammar ApexGrammar { get; } = new ApexGrammar();
+        private static PhpGrammar PhpGrammar { get; } = new PhpGrammar();
 
-        public static MemberDeclarationSyntax ParseFile(string text) =>
-            ApexGrammar.CompilationUnit.ParseEx(text);
-
-        public static ClassDeclarationSyntax ParseClass(string text) =>
-            ApexGrammar.ClassDeclaration.ParseEx(text);
-
-        public static EnumDeclarationSyntax ParseEnum(string text) =>
-            ApexGrammar.EnumDeclaration.ParseEx(text);
+        // public static MemberDeclarationSyntax ParseFile(string text) =>
+        //     ApexGrammar.CompilationUnit.ParseEx(text);
+        //
+        // public static ClassDeclarationSyntax ParseClass(string text) =>
+        //     ApexGrammar.ClassDeclaration.ParseEx(text);
+        //
+        // public static EnumDeclarationSyntax ParseEnum(string text) =>
+        //     ApexGrammar.EnumDeclaration.ParseEx(text);
     }
 }

@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using IEnumerable = System.Collections.IEnumerable;
 
-namespace ApexSharp.ApexParser.Toolbox
+namespace PhpClr.Parsers.PhpParser.Toolbox
 {
     public static class IEnumerableExtensions
     {

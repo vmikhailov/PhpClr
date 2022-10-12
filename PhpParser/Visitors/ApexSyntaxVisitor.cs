@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ApexSharp.ApexParser.Syntax;
+﻿using PhpClr.Parsers.PhpParser.Syntax;
 
-namespace ApexSharp.ApexParser.Visitors
+namespace PhpClr.Parsers.PhpParser.Visitors
 {
     public abstract class ApexSyntaxVisitor
     {

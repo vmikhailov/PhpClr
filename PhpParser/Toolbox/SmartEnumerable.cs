@@ -3,11 +3,9 @@
 // namespace MiscUtil.Collections
 /*--------------------------------*/
 
-using System;
-using System.Collections;
 using System.Collections.Generic;
 
-namespace ApexSharp.ApexParser.Toolbox
+namespace PhpClr.Parsers.PhpParser.Toolbox
 {
 	/// <summary>
 	/// Static class to make creation easier. If possible though, use the extension

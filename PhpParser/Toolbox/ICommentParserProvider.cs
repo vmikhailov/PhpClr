@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Sprache;
+﻿using Sprache;
 
-namespace ApexSharp.ApexParser.Toolbox
+namespace PhpClr.Parsers.PhpParser.Toolbox
 {
     public interface ICommentParserProvider
     {

@@ -1,18 +1,18 @@
-﻿using ApexSharp.ApexParser.Parser;
-using ApexSharp.ApexParser.Toolbox;
-using ApexSharp.ApexParser.Visitors;
-using MemberDeclarationSyntax = ApexSharp.ApexParser.Syntax.MemberDeclarationSyntax;
+﻿using PhpClr.Parsers.PhpParser.Grammar;
+using PhpClr.Parsers.PhpParser.Visitors;
+using MemberDeclarationSyntax = PhpClr.Parsers.PhpParser.Syntax.MemberDeclarationSyntax;
 
-namespace ApexSharp.ApexParser
+namespace PhpClr.Parsers.PhpParser
 {
     public class ApexSharpParser
     {
-        private static ApexGrammar ApexGrammar { get; } = new ApexGrammar();
+        private static PhpGrammar PhpGrammar { get; } = new PhpGrammar();
 
         // Get the AST for a given APEX File
         public static MemberDeclarationSyntax GetApexAst(string apexCode)
         {
-            return ApexGrammar.CompilationUnit.ParseEx(apexCode);
+            // return ApexGrammar.CompilationUnit.ParseEx(apexCode);
+            return null;
         }
 
         // Format APEX Code so each statement is in its own line

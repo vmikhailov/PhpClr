@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ApexSharp.ApexParser.Syntax;
-using ApexSharp.ApexParser.Toolbox;
+using HackCLR.Parsers.PhpParser.Visitors;
+using PhpClr.Parsers.PhpParser.Syntax;
+using PhpClr.Parsers.PhpParser.Toolbox;
 
-namespace ApexSharp.ApexParser.Visitors
+namespace PhpClr.Parsers.PhpParser.Visitors
 {
     public class ApexMethodBodyGenerator : ApexCodeGeneratorBase
     {

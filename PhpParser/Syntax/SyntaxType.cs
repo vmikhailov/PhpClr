@@ -1,4 +1,4 @@
-﻿namespace ApexSharp.ApexParser.Syntax
+﻿namespace PhpClr.Parsers.PhpParser.Syntax
 {
     public enum SyntaxType
     {
@@ -55,6 +55,7 @@
         Type,
         UpdateStatement,
         UpsertStatement,
+        CompilationUnit,
         VariableDeclaration,
         VariableDeclarator,
         WhenElseClause,

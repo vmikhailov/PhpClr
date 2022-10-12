@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using HackCLR.Parsers.PhpParser.Syntax;
-using HackCLR.Parsers.PhpParser.Toolbox;
+using PhpClr.Parsers.PhpParser.Syntax;
+using PhpClr.Parsers.PhpParser.Toolbox;
 using Sprache;
 
-namespace HackCLR.Parsers.PhpParser.Grammar
+namespace PhpClr.Parsers.PhpParser.Grammar
 {
-	public class ApexGrammar : ICommentParserProvider
+	public class PhpGrammar : ICommentParserProvider
 	{
 		// examples: a, Apex, code123
 		protected internal virtual Parser<string> RawIdentifier =>
@@ -60,6 +60,7 @@ namespace HackCLR.Parsers.PhpParser.Grammar
 		// examples: int, String, System.Collections.Hashtable
 		protected internal virtual Parser<TypeSyntax> NonGenericType =>
 			SystemType.Or(QualifiedIdentifier.Select(qi => new TypeSyntax(qi)));
+			//SystemType.Select(qi => new TypeSyntax(qi));
 
 		// examples: string, int, char
 		protected internal virtual Parser<IEnumerable<TypeSyntax>> TypeParameters =>
@@ -87,8 +88,7 @@ namespace HackCLR.Parsers.PhpParser.Grammar
 		protected internal virtual Parser<(TypeSyntax Type, ICommented<string> Name)> ParameterWithoutType =>
 			from name in Identifier.Commented(this)
 			select (new TypeSyntax("object"), name);
-
-
+		
 		// example: string name
 		// from type in TypeReference.Commented(this)
 		protected internal virtual Parser<ParameterSyntax> ParameterDeclaration =>
@@ -117,7 +117,6 @@ namespace HackCLR.Parsers.PhpParser.Grammar
 				.Or(Keyword(PhpKeywords.Protected))
 				.Or(Keyword(PhpKeywords.Private))
 				.Text().Token().Named("AccessModifier");
-
 
 		// examples: public, private, with sharing
 		protected internal virtual Parser<string> Modifier =>
@@ -192,9 +191,8 @@ namespace HackCLR.Parsers.PhpParser.Grammar
 				Body = body.Value,
 				TrailingComments = body.TrailingComments.ToList(),
 			};
-
-		// example: private static int x, y, z = 3;
-		protected internal virtual Parser<FieldDeclarationSyntax> FieldDeclaration =>
+		
+		protected internal virtual Parser<FieldDeclarationSyntax> FieldDeclarationWithType =>
 			from heading in MemberDeclarationHeading
 			from type in TypeReference
 			from declarators in FieldDeclarator.DelimitedBy(Parse.Char(',').Token())
@@ -204,6 +202,20 @@ namespace HackCLR.Parsers.PhpParser.Grammar
 				Type = type,
 				Fields = declarators.ToList(),
 			};
+		
+		protected internal virtual Parser<FieldDeclarationSyntax> FieldDeclarationWithoutType =>
+			from heading in MemberDeclarationHeading
+			from declarators in FieldDeclarator.DelimitedBy(Parse.Char(',').Token())
+			from semicolon in Parse.Char(';').Token()
+			select new FieldDeclarationSyntax(heading)
+			{
+				Type = new TypeSyntax("object"),
+				Fields = declarators.ToList(),
+			};
+
+		// example: private static int x, y, z = 3;
+		protected internal virtual Parser<FieldDeclarationSyntax> FieldDeclaration =>
+			FieldDeclarationWithType.Or(FieldDeclarationWithoutType); 
 
 		// example: now = DateTime.Now()
 		protected internal virtual Parser<FieldDeclaratorSyntax> FieldDeclarator =>

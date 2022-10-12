@@ -1,14 +1,16 @@
 <?php
-class Fruit {
-  // Properties
-  public $name;
-  public $color;
+class Foo {
+  method1(a)
+  {
+                   
+  }
+}
 
-  // Methods
-  void set_name($name) {
-    $this->name = $name;
+class Bar {
+  // parameters without type definition
+  method2(int $b)
+  {
+                   
   }
-  function get_name() {
-    return $this->name;
-  }
-}?>
+}
+?>

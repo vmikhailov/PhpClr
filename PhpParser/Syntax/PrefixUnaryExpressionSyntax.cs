@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using ApexSharp.ApexParser.Visitors;
+using PhpClr.Parsers.PhpParser.Visitors;
 
-namespace ApexSharp.ApexParser.Syntax
+namespace PhpClr.Parsers.PhpParser.Syntax
 {
     public class PrefixUnaryExpressionSyntax : ExpressionSyntax
     {

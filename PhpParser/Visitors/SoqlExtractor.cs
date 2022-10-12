@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using ApexSharp.ApexParser.Syntax;
-using ApexSharp.ApexParser.Toolbox;
+using PhpClr.Parsers.PhpParser.Syntax;
 
-namespace ApexSharp.ApexParser.Visitors
+namespace PhpClr.Parsers.PhpParser.Visitors
 {
     public class SoqlExtractor : ApexSyntaxVisitor
     {
@@ -16,7 +12,7 @@ namespace ApexSharp.ApexParser.Visitors
 
         public static string[] ExtractAllQueries(string apexCode)
         {
-            var apexAst = ApexParser.ApexSharpParser.GetApexAst(apexCode);
+            var apexAst = ApexSharpParser.GetApexAst(apexCode);
             var visitor = new SoqlExtractor();
             apexAst.Accept(visitor);
             return visitor.SoqlQueries.ToArray();

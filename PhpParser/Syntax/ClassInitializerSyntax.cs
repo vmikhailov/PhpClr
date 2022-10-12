@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ApexSharp.ApexParser.Parser;
-using ApexSharp.ApexParser.Toolbox;
-using ApexSharp.ApexParser.Visitors;
+using PhpClr.Parsers.PhpParser.Grammar;
+using PhpClr.Parsers.PhpParser.Toolbox;
+using PhpClr.Parsers.PhpParser.Visitors;
 
-namespace ApexSharp.ApexParser.Syntax
+namespace PhpClr.Parsers.PhpParser.Syntax
 {
     public class ClassInitializerSyntax : MemberDeclarationSyntax
     {
@@ -25,6 +22,6 @@ namespace ApexSharp.ApexParser.Syntax
 
         public BlockSyntax Body { get; set; }
 
-        public bool IsStatic => Modifiers.EmptyIfNull().Any(m => m == ApexKeywords.Static);
+        public bool IsStatic => Modifiers.EmptyIfNull().Any(m => m == PhpKeywords.Static);
     }
 }

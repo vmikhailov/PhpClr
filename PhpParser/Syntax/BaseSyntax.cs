@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text.RegularExpressions;
-using ApexSharp.ApexParser.Toolbox;
-using ApexSharp.ApexParser.Visitors;
+using PhpClr.Parsers.PhpParser.Toolbox;
+using PhpClr.Parsers.PhpParser.Visitors;
 
-namespace ApexSharp.ApexParser.Syntax
+namespace PhpClr.Parsers.PhpParser.Syntax
 {
     [DebuggerTypeProxy(typeof(BaseSyntaxDebuggerProxy))]
     public abstract class BaseSyntax

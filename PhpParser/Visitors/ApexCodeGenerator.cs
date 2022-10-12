@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ApexSharp.ApexParser.Syntax;
-using ApexSharp.ApexParser.Toolbox;
+using PhpClr.Parsers.PhpParser.Syntax;
 
-namespace ApexSharp.ApexParser.Visitors
+namespace HackCLR.Parsers.PhpParser.Visitors
 {
     public class ApexCodeGenerator : ApexCodeGeneratorBase
     {

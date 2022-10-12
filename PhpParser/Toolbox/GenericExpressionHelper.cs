@@ -4,10 +4,9 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using ApexSharp.ApexParser.Parser;
+using PhpClr.Parsers.PhpParser.Grammar;
 
-namespace ApexSharp.ApexParser.Toolbox
+namespace PhpClr.Parsers.PhpParser.Toolbox
 {
     public static class GenericExpressionHelper
     {
@@ -241,27 +240,27 @@ namespace ApexSharp.ApexParser.Toolbox
         private static Dictionary<string, string> CSharpTypes { get; } =
             new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
             {
-                { ApexKeywords.Boolean, "bool" },
-                { ApexKeywords.Byte, "byte" },
-                { ApexKeywords.Char, "char" },
-                { ApexKeywords.Datetime, "Datetime" },
-                { ApexKeywords.Date, "Date" },
-                { ApexKeywords.Decimal, "decimal" },
-                { ApexKeywords.Double, "double" },
-                { ApexKeywords.Exception, nameof(Exception) },
-                { ApexKeywords.Float, "float" },
-                { ApexKeywords.Int, "int" },
-                { ApexKeywords.Integer, "int" },
-                { ApexKeywords.Long, "long" },
-                { ApexKeywords.Object, "object" },
-                { ApexKeywords.Short, "short" },
-                { ApexKeywords.String, "string" },
-                { ApexKeywords.Time, "Time" },
-                { ApexKeywords.Void, "void" },
+                { PhpKeywords.Boolean, "bool" },
+                { PhpKeywords.Byte, "byte" },
+                { PhpKeywords.Char, "char" },
+                { PhpKeywords.Datetime, "Datetime" },
+                { PhpKeywords.Date, "Date" },
+                { PhpKeywords.Decimal, "decimal" },
+                { PhpKeywords.Double, "double" },
+                { PhpKeywords.Exception, nameof(Exception) },
+                { PhpKeywords.Float, "float" },
+                { PhpKeywords.Int, "int" },
+                { PhpKeywords.Integer, "int" },
+                { PhpKeywords.Long, "long" },
+                { PhpKeywords.Object, "object" },
+                { PhpKeywords.Short, "short" },
+                { PhpKeywords.String, "string" },
+                { PhpKeywords.Time, "Time" },
+                { PhpKeywords.Void, "void" },
             };
 
         private static Dictionary<string, string> ApexTypes { get; } =
-            CSharpTypes.Where(p => p.Key != ApexKeywords.Int).ToDictionary(p => p.Value, p => p.Key);
+            CSharpTypes.Where(p => p.Key != PhpKeywords.Int).ToDictionary(p => p.Value, p => p.Key);
 
         private static Dictionary<Regex, string> CSharpTypeRegexExcludingMemberReferences { get; } =
             CSharpTypes.ToDictionary(p => new Regex($"\\b(?<!\\.){p.Key}\\b(?!\\s*\\.)",

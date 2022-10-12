@@ -7,4 +7,21 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PhpParser\PhpParser.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="TestFiles\test004.php" />
+    <EmbeddedResource Include="TestFiles\test006.php" />
+    <None Remove="TestFiles\test001.php" />
+    <EmbeddedResource Include="TestFiles\test001.php" />
+    <None Remove="TestFiles\test002.php" />
+    <EmbeddedResource Include="TestFiles\test002.php" />
+    <None Remove="TestFiles\test003.php" />
+    <EmbeddedResource Include="TestFiles\test003.php" />
+    <None Remove="TestFiles\test004.php" />
+    <EmbeddedResource Include="TestFiles\test005.php" />
+  </ItemGroup>
+
 </Project>

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using HackCLR.Parsers.PhpParser.Toolbox;
+using PhpClr.Parsers.PhpParser.Toolbox;
 
-namespace HackCLR.Parsers.PhpParser.Grammar
+namespace PhpClr.Parsers.PhpParser.Grammar
 {
     public static class PhpKeywords
     {
@@ -197,7 +197,7 @@ namespace HackCLR.Parsers.PhpParser.Grammar
         public static string Update => "update"; // System.Database class method
         public static string Upsert => "upsert"; // System.Database class method
         public static string When => "when"; // switch on ... when
-        public static string With => "with";
+
         public static string Yesterday => "yesterday"; // can be used as an identifier
 
         // 3. Not listed in the official documentation but apparently used
@@ -228,12 +228,9 @@ namespace HackCLR.Parsers.PhpParser.Grammar
         public static string Time => "Time"; // built-in type
         public static string Today => "today"; // System.today() method
         public static string Tomorrow => "tomorrow"; // can be used as property name
-        public static string Transient => "transient"; // variable modifier
         public static string Trigger => "trigger"; // built-in Trigger class
         public static string Void => "void";
         ////public const string Volatile = "volatile"; // the status is unclear
-        public static string WebService => "webservice"; // method modifier
-        public static string Without => "without"; // part of "without sharing"
 
         // Reference:
         // https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_annotation.htm
